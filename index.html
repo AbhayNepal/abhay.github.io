@@ -1,1 +1,712 @@
-<h1> Testing </h1>
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abhay Nepal | Mid-Level Software Engineer & Production Support Specialist</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            700: '#15803d',
+                            900: '#14532d',
+                        },
+                        accent: {
+                            500: '#06b6d4',
+                            600: '#0891b2',
+                        },
+                        darkbg: '#0b0f17',
+                        cardbg: '#111827',
+                        borderbg: '#1f293d'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-text {
+            background: linear-gradient(135deg, #22c55e 0%, #06b6d4 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gradient-border {
+            border-image: linear-gradient(to right, #22c55e, #06b6d4) 1;
+        }
+        .glass-card {
+            background: rgba(17, 24, 39, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+    </style>
+</head>
+<body class="bg-darkbg text-slate-200 antialiased selection:bg-primary-500 selection:text-white">
+
+    <!-- Navigation Header -->
+    <header class="fixed top-0 left-0 w-full z-50 glass-card transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-2 group">
+                <div class="w-10 h-10 rounded-lg bg-gradient-to-tr from-primary-500 to-accent-500 flex items-center justify-center text-slate-950 font-bold text-xl shadow-lg shadow-primary-500/20 group-hover:scale-105 transition-transform">
+                    AN
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-lg font-bold tracking-tight text-white group-hover:text-primary-500 transition-colors">Abhay Nepal</span>
+                    <span class="text-xs text-slate-400">Software Engineer</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+                <a href="#about" class="text-slate-300 hover:text-primary-500 transition-colors">About</a>
+                <a href="#skills" class="text-slate-300 hover:text-primary-500 transition-colors">Skills</a>
+                <a href="#experience" class="text-slate-300 hover:text-primary-500 transition-colors">Experience</a>
+                <a href="#projects" class="text-slate-300 hover:text-primary-500 transition-colors">Projects</a>
+                <a href="#education" class="text-slate-300 hover:text-primary-500 transition-colors">Education</a>
+                <a href="#contact" class="px-4 py-2 rounded-lg bg-primary-600 hover:bg-primary-500 text-slate-950 font-semibold shadow-md shadow-primary-600/30 transition-all hover:shadow-primary-500/50">
+                    Get in Touch
+                </a>
+            </nav>
+
+            <!-- Mobile Hamburger Button -->
+            <button id="menu-btn" class="md:hidden text-slate-300 hover:text-white focus:outline-none">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden glass-card border-t border-slate-800 px-6 py-6 space-y-4">
+            <a href="#about" class="block text-slate-300 hover:text-primary-500 transition-colors">About</a>
+            <a href="#skills" class="block text-slate-300 hover:text-primary-500 transition-colors">Skills</a>
+            <a href="#experience" class="block text-slate-300 hover:text-primary-500 transition-colors">Experience</a>
+            <a href="#projects" class="block text-slate-300 hover:text-primary-500 transition-colors">Projects</a>
+            <a href="#education" class="block text-slate-300 hover:text-primary-500 transition-colors">Education</a>
+            <a href="#contact" class="block text-center px-4 py-2 rounded-lg bg-primary-600 text-slate-950 font-semibold">
+                Get in Touch
+            </a>
+        </div>
+    </header>
+
+    <main class="pt-24">
+        <!-- Hero Section -->
+        <section id="hero" class="relative min-h-[90vh] flex items-center justify-center px-4 sm:px-6 lg:px-8 py-16 overflow-hidden">
+            <!-- Background Glow -->
+            <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-96 h-96 bg-primary-500/10 rounded-full blur-3xl -z-10"></div>
+            <div class="absolute bottom-1/4 right-10 w-80 h-80 bg-accent-500/10 rounded-full blur-3xl -z-10"></div>
+
+            <div class="max-w-5xl mx-auto text-center space-y-8">
+                <!-- Status Badge -->
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card border border-primary-500/30 text-xs sm:text-sm font-medium text-primary-500">
+                    <span class="w-2 h-2 rounded-full bg-primary-500 animate-pulse"></span>
+                    Available for High-Impact Software Roles & Technical Advisory
+                </div>
+
+                <!-- Main Heading -->
+                <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white leading-tight">
+                    Engineered for <span class="gradient-text">Reliability</span> & Scale
+                </h1>
+
+                <!-- Subtitle -->
+                <p class="max-w-3xl mx-auto text-lg sm:text-xl text-slate-400 leading-relaxed">
+                    I am <strong class="text-white">Abhay Nepal</strong>, a Results-Oriented Software Engineer with <span class="text-primary-500 font-semibold">3+ years</span> of commercial experience building robust <strong class="text-slate-200">Java Microservices</strong>, mastering <strong class="text-slate-200">L3 Production Support</strong>, and engineering automated <strong class="text-slate-200">EDI & Payment Pipelines</strong>.
+                </p>
+
+                <!-- Key Metrics Grid -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 pt-4 max-w-4xl mx-auto">
+                    <div class="glass-card p-4 rounded-xl text-center border-t-2 border-primary-500">
+                        <div class="text-2xl sm:text-3xl font-extrabold text-white">3+ Years</div>
+                        <div class="text-xs text-slate-400 mt-1">Commercial Experience</div>
+                    </div>
+                    <div class="glass-card p-4 rounded-xl text-center border-t-2 border-accent-500">
+                        <div class="text-2xl sm:text-3xl font-extrabold text-white">Top 2.5%</div>
+                        <div class="text-xs text-slate-400 mt-1">IOE Entrance Rank (~16k)</div>
+                    </div>
+                    <div class="glass-card p-4 rounded-xl text-center border-t-2 border-primary-500">
+                        <div class="text-2xl sm:text-3xl font-extrabold text-white">20% → 80%</div>
+                        <div class="text-xs text-slate-400 mt-1">Test Coverage Boost</div>
+                    </div>
+                    <div class="glass-card p-4 rounded-xl text-center border-t-2 border-accent-500">
+                        <div class="text-2xl sm:text-3xl font-extrabold text-white">+30%</div>
+                        <div class="text-xs text-slate-400 mt-1">ETL Efficiency Increase</div>
+                    </div>
+                </div>
+
+                <!-- CTAs & Social Links -->
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-6">
+                    <a href="#contact" class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-primary-600 hover:bg-primary-500 text-slate-950 font-bold shadow-lg shadow-primary-600/30 transition-all flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-paper-plane"></i> Contact Me
+                    </a>
+                    <a href="https://github.com/abhaynepal" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-8 py-3.5 rounded-xl glass-card hover:bg-slate-800 text-white font-semibold transition-all flex items-center justify-center gap-2 border border-slate-700">
+                        <i class="fa-brands fa-github text-lg"></i> GitHub Profile
+                    </a>
+                    <a href="https://www.linkedin.com/in/abhay-nepal" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-8 py-3.5 rounded-xl glass-card hover:bg-slate-800 text-white font-semibold transition-all flex items-center justify-center gap-2 border border-slate-700">
+                        <i class="fa-brands fa-linkedin text-lg text-accent-500"></i> LinkedIn
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row gap-12 items-center">
+                <div class="w-full md:w-1/2 space-y-6">
+                    <div class="inline-flex items-center gap-2 text-primary-500 font-semibold text-sm uppercase tracking-wider">
+                        <i class="fa-solid fa-user-gear"></i> About Me
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-white leading-tight">
+                        Bridging Technical Leadership & Mission-Critical Architecture
+                    </h2>
+                    <p class="text-slate-400 leading-relaxed">
+                        I specialize in modern Java backend architectures, microservices ecosystems, and complex third-party system integrations. My work revolves around resolving mission-critical operational challenges, taking absolute ownership of critical production incidents (RCA), and enforcing strict operational SLAs.
+                    </p>
+                    <p class="text-slate-400 leading-relaxed">
+                        With extensive experience in the US Healthcare domain (HIPAA compliance, insurance claims, EDI ETL pipelines), I lead initiatives from system redesign to release management, CI/CD pipeline automation, and technical mentorship.
+                    </p>
+
+                    <!-- Quick Details -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2 text-sm text-slate-300">
+                        <div class="flex items-center gap-3 glass-card p-3 rounded-lg">
+                            <i class="fa-solid fa-location-dot text-primary-500"></i>
+                            <span>Sanepa / Kathmandu, Nepal</span>
+                        </div>
+                        <div class="flex items-center gap-3 glass-card p-3 rounded-lg">
+                            <i class="fa-solid fa-envelope text-accent-500"></i>
+                            <span>abhay.nepal.9@gmail.com</span>
+                        </div>
+                        <div class="flex items-center gap-3 glass-card p-3 rounded-lg">
+                            <i class="fa-solid fa-phone text-primary-500"></i>
+                            <span>(+977) 9846927983</span>
+                        </div>
+                        <div class="flex items-center gap-3 glass-card p-3 rounded-lg">
+                            <i class="fa-solid fa-language text-accent-500"></i>
+                            <span>English (IELTS 7) & Nepali</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Specialization Highlights Grid -->
+                <div class="w-full md:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="glass-card p-6 rounded-2xl border border-slate-800 hover:border-primary-500/50 transition-all">
+                        <div class="w-12 h-12 rounded-xl bg-primary-500/10 text-primary-500 flex items-center justify-center text-xl mb-4">
+                            <i class="fa-solid fa-microchip"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2">Java Microservices</h3>
+                        <p class="text-slate-400 text-sm">Java 17, Spring Boot 3.5, JPA, Hibernate, Clean Architecture, and Containerized deployments.</p>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-2xl border border-slate-800 hover:border-accent-500/50 transition-all">
+                        <div class="w-12 h-12 rounded-xl bg-accent-500/10 text-accent-500 flex items-center justify-center text-xl mb-4">
+                            <i class="fa-solid fa-shield-cat"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2">L3 Production Support</h3>
+                        <p class="text-slate-400 text-sm">Incident ownership, RCA, Honeycomb structured logging, Kibana, YourKit, and defect resolution.</p>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-2xl border border-slate-800 hover:border-accent-500/50 transition-all">
+                        <div class="w-12 h-12 rounded-xl bg-accent-500/10 text-accent-500 flex items-center justify-center text-xl mb-4">
+                            <i class="fa-solid fa-network-wired"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2">API & ETL Integration</h3>
+                        <p class="text-slate-400 text-sm">Third-party payment gateways (Zelis), secure EDI pipelines, and optimized data synchronization.</p>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-2xl border border-slate-800 hover:border-primary-500/50 transition-all">
+                        <div class="w-12 h-12 rounded-xl bg-primary-500/10 text-primary-500 flex items-center justify-center text-xl mb-4">
+                            <i class="fa-solid fa-users-gear"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2">Mentorship & DevOps</h3>
+                        <p class="text-slate-400 text-sm">Guided global teams on CircleCI, Kafka, Docker, and Kubernetes deployment strategies.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Skills Section -->
+        <section id="skills" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto bg-slate-900/40 rounded-3xl my-12 border border-slate-800">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <div class="inline-flex items-center gap-2 text-primary-500 font-semibold text-sm uppercase tracking-wider">
+                    <i class="fa-solid fa-code"></i> Technical Capabilities
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-bold text-white">Skills & Tooling Ecosystem</h2>
+                <p class="text-slate-400">Battle-tested tools and frameworks utilized across production engineering environments.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Skill Category 1 -->
+                <div class="glass-card p-6 rounded-2xl border border-slate-800">
+                    <h3 class="text-xl font-bold text-white mb-4 flex items-center gap-3">
+                        <i class="fa-solid fa-layer-group text-primary-500"></i> Core Languages & Frameworks
+                    </h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-800 text-slate-200 text-sm font-medium border border-slate-700">Java (Core & 17)</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-800 text-primary-500 text-sm font-medium border border-primary-500/30">Spring Boot 3.5</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-800 text-slate-200 text-sm font-medium border border-slate-700">Spring Framework</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-800 text-slate-200 text-sm font-medium border border-slate-700">Hibernate / JPA</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-800 text-slate-200 text-sm font-medium border border-slate-700">React JS</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-800 text-slate-200 text-sm font-medium border border-slate-700">Enterprise Computing</span>
+                    </div>
+                </div>
+
+                <!-- Skill Category 2 -->
+                <div class="glass-card p-6 rounded-2xl border border-slate-800">
+                    <h3 class="text-xl font-bold text-white mb-4 flex items-center gap-3">
+                        <i class="fa-solid fa-bug text-accent-500"></i> Support, Logging & Observability
+                    </h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-800 text-accent-500 text-sm font-medium border border-accent-500/30">Root Cause Analysis (RCA)</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-800 text-slate-200 text-sm font-medium border border-slate-700">Honeycomb (Structured Logging)</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-800 text-slate-200 text-sm font-medium border border-slate-700">Kibana</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-800 text-slate-200 text-sm font-medium border border-slate-700">Elasticsearch</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-800 text-slate-200 text-sm font-medium border border-slate-700">YourKit Profiler</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-800 text-slate-200 text-sm font-medium border border-slate-700">Log Analysis</span>
+                    </div>
+                </div>
+
+                <!-- Skill Category 3 -->
+                <div class="glass-card p-6 rounded-2xl border border-slate-800">
+                    <h3 class="text-xl font-bold text-white mb-4 flex items-center gap-3">
+                        <i class="fa-solid fa-server text-primary-500"></i> Databases, DevOps & Cloud
+                    </h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-800 text-slate-200 text-sm font-medium border border-slate-700">PostgreSQL / PSQL</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-800 text-slate-200 text-sm font-medium border border-slate-700">Apache Kafka</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-800 text-slate-200 text-sm font-medium border border-slate-700">Docker</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-800 text-slate-200 text-sm font-medium border border-slate-700">Kubernetes</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-800 text-slate-200 text-sm font-medium border border-slate-700">CircleCI</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-800 text-slate-200 text-sm font-medium border border-slate-700">Git / GitHub</span>
+                    </div>
+                </div>
+
+                <!-- Skill Category 4 -->
+                <div class="glass-card p-6 rounded-2xl border border-slate-800">
+                    <h3 class="text-xl font-bold text-white mb-4 flex items-center gap-3">
+                        <i class="fa-solid fa-vial text-accent-500"></i> Testing & Quality Assurance
+                    </h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-800 text-slate-200 text-sm font-medium border border-slate-700">JUnit</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-800 text-slate-200 text-sm font-medium border border-slate-700">Mockito</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-800 text-slate-200 text-sm font-medium border border-slate-700">Cypress (E2E Testing)</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-800 text-slate-200 text-sm font-medium border border-slate-700">Integration Testing</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-800 text-slate-200 text-sm font-medium border border-slate-700">Automated QA</span>
+                    </div>
+                </div>
+
+                <!-- Skill Category 5 -->
+                <div class="glass-card p-6 rounded-2xl border border-slate-800">
+                    <h3 class="text-xl font-bold text-white mb-4 flex items-center gap-3">
+                        <i class="fa-solid fa-gears text-primary-500"></i> Architecture & APIs
+                    </h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-800 text-slate-200 text-sm font-medium border border-slate-700">Microservices Architecture</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-800 text-slate-200 text-sm font-medium border border-slate-700">RESTful APIs & JSON</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-800 text-slate-200 text-sm font-medium border border-slate-700">Java Design Patterns</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-800 text-slate-200 text-sm font-medium border border-slate-700">Data Structures & Algo</span>
+                    </div>
+                </div>
+
+                <!-- Skill Category 6 -->
+                <div class="glass-card p-6 rounded-2xl border border-slate-800">
+                    <h3 class="text-xl font-bold text-white mb-4 flex items-center gap-3">
+                        <i class="fa-solid fa-hospital-user text-accent-500"></i> Domain & Governance
+                    </h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-800 text-slate-200 text-sm font-medium border border-slate-700">US Healthcare Domain</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-800 text-slate-200 text-sm font-medium border border-slate-700">HIPAA Compliance</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-800 text-slate-200 text-sm font-medium border border-slate-700">Insurance Claims & Eligibility</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-800 text-slate-200 text-sm font-medium border border-slate-700">Secure EDI ETL Pipelines</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-800 text-slate-200 text-sm font-medium border border-slate-700">Agile / Jira / SLA Tracking</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Work Experience Section -->
+        <section id="experience" class="py-20 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
+            <div class="text-center mb-16 space-y-4">
+                <div class="inline-flex items-center gap-2 text-primary-500 font-semibold text-sm uppercase tracking-wider">
+                    <i class="fa-solid fa-briefcase"></i> Track Record
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-bold text-white">Commercial Work Experience</h2>
+            </div>
+
+            <div class="relative border-l-2 border-slate-800 ml-4 md:ml-32 space-y-12">
+                <!-- Job 1 -->
+                <div class="relative pl-8 md:pl-12 group">
+                    <!-- Marker -->
+                    <div class="absolute -left-[17px] top-1.5 w-8 h-8 rounded-full bg-slate-900 border-2 border-primary-500 flex items-center justify-center text-primary-500 text-xs shadow-lg shadow-primary-500/30">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+
+                    <!-- Date Tag (Desktop Left) -->
+                    <div class="hidden md:block absolute -left-36 top-1 text-xs font-semibold text-primary-500 uppercase tracking-wide text-right w-28">
+                        05/2025 – Present
+                    </div>
+
+                    <div class="glass-card p-6 rounded-2xl border border-slate-800 hover:border-slate-700 transition-all">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
+                            <div>
+                                <h3 class="text-xl font-bold text-white">Mid Level Software Engineer</h3>
+                                <div class="text-sm text-slate-400">Viveka Services • Sanepa, Nepal</div>
+                            </div>
+                            <span class="md:hidden inline-block text-xs font-semibold text-primary-500 bg-primary-500/10 px-3 py-1 rounded-full w-max">
+                                05/2025 – Present
+                            </span>
+                        </div>
+
+                        <ul class="space-y-3 text-slate-300 text-sm list-disc pl-4">
+                            <li><strong class="text-white">L3 Production Support & Incident Ownership:</strong> Took full responsibility for critical production incidents, conducting initial investigations, root cause analyses (RCA), and mitigating operational failures.</li>
+                            <li><strong class="text-white">API & Vendor Integration:</strong> Architected and troubleshot complex payment API integrations with third-party vendor <span class="text-primary-500 font-medium">Zelis</span>, ensuring secure data parsing and high transaction reliability.</li>
+                            <li><strong class="text-white">Code Quality Initiative:</strong> Spearheaded testing improvements that elevated unit and integration test coverage from <span class="text-primary-500 font-bold">20% to 80%</span>, dramatically reducing post-release bugs.</li>
+                            <li><strong class="text-white">End-to-End Release Ownership:</strong> Managed software releases, verified code-level patches, coordinated safe production deployments, and fulfilled strict SLA parameters.</li>
+                            <li><strong class="text-white">Informal Tech Lead:</strong> Led design discussions, mentored peers, and governed core architecture decisions across client integration pipelines.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Job 2 -->
+                <div class="relative pl-8 md:pl-12 group">
+                    <div class="absolute -left-[17px] top-1.5 w-8 h-8 rounded-full bg-slate-900 border-2 border-accent-500 flex items-center justify-center text-accent-500 text-xs shadow-lg shadow-accent-500/30">
+                        <i class="fa-solid fa-chalkboard-user"></i>
+                    </div>
+
+                    <div class="hidden md:block absolute -left-36 top-1 text-xs font-semibold text-accent-500 uppercase tracking-wide text-right w-28">
+                        02/2025 – 03/2026
+                    </div>
+
+                    <div class="glass-card p-6 rounded-2xl border border-slate-800 hover:border-slate-700 transition-all">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
+                            <div>
+                                <h3 class="text-xl font-bold text-white">Freelance Technical Mentor (Software Engineering)</h3>
+                                <div class="text-sm text-slate-400">Remote • United States Clients</div>
+                            </div>
+                            <span class="md:hidden inline-block text-xs font-semibold text-accent-500 bg-accent-500/10 px-3 py-1 rounded-full w-max">
+                                02/2025 – 03/2026
+                            </span>
+                        </div>
+
+                        <ul class="space-y-3 text-slate-300 text-sm list-disc pl-4">
+                            <li><strong class="text-white">Modern Stack Mentorship:</strong> Mentored international engineering teams at organizations such as <span class="text-slate-100 font-medium">RB Globals</span> and <span class="text-slate-100 font-medium">SolarWinds</span> on containerization, microservices architecture, and cloud deployment.</li>
+                            <li><strong class="text-white">CI/CD & Event Streaming:</strong> Guided teams in building trunk-based CI/CD pipelines with CircleCI, real-time data streaming with Apache Kafka, and Kubernetes cloud orchestration.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Job 3 -->
+                <div class="relative pl-8 md:pl-12 group">
+                    <div class="absolute -left-[17px] top-1.5 w-8 h-8 rounded-full bg-slate-900 border-2 border-slate-600 flex items-center justify-center text-slate-400 text-xs">
+                        <i class="fa-solid fa-database"></i>
+                    </div>
+
+                    <div class="hidden md:block absolute -left-36 top-1 text-xs font-semibold text-slate-400 uppercase tracking-wide text-right w-28">
+                        10/2023 – 05/2025
+                    </div>
+
+                    <div class="glass-card p-6 rounded-2xl border border-slate-800 hover:border-slate-700 transition-all">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
+                            <div>
+                                <h3 class="text-xl font-bold text-white">Associate Software Engineer</h3>
+                                <div class="text-sm text-slate-400">Viveka Services • Sanepa, Nepal</div>
+                            </div>
+                            <span class="md:hidden inline-block text-xs font-semibold text-slate-400 bg-slate-800 px-3 py-1 rounded-full w-max">
+                                10/2023 – 05/2025
+                            </span>
+                        </div>
+
+                        <ul class="space-y-3 text-slate-300 text-sm list-disc pl-4">
+                            <li><strong class="text-white">System Refactoring:</strong> Revamped legacy production ETL pipelines to V2 architecture, resulting in a <span class="text-primary-500 font-bold">30% efficiency increase</span> in data processing.</li>
+                            <li><strong class="text-white">Search Engine Optimization:</strong> Utilized Elasticsearch to optimize platform search results and engineered automated data quality reporting tools for health eligibility datasets.</li>
+                            <li><strong class="text-white">Automated QA:</strong> Developed comprehensive unit and integration test suites for mission-critical Java components.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Job 4 -->
+                <div class="relative pl-8 md:pl-12 group">
+                    <div class="absolute -left-[17px] top-1.5 w-8 h-8 rounded-full bg-slate-900 border-2 border-slate-700 flex items-center justify-center text-slate-500 text-xs">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+
+                    <div class="hidden md:block absolute -left-36 top-1 text-xs font-semibold text-slate-500 uppercase tracking-wide text-right w-28">
+                        06/2023 – 10/2023
+                    </div>
+
+                    <div class="glass-card p-6 rounded-2xl border border-slate-800 hover:border-slate-700 transition-all">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2">
+                            <div>
+                                <h3 class="text-xl font-bold text-white">Software Engineering Intern</h3>
+                                <div class="text-sm text-slate-400">Viveka Services • Sanepa, Nepal</div>
+                            </div>
+                        </div>
+                        <p class="text-slate-300 text-sm leading-relaxed">
+                            Developed and sanitized complex file parsers using Spring & Spring Boot frameworks, debugged production defects, and established effective Git version control workflows.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Projects Section -->
+        <section id="projects" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <div class="inline-flex items-center gap-2 text-primary-500 font-semibold text-sm uppercase tracking-wider">
+                    <i class="fa-solid fa-laptop-code"></i> Engineering Showcase
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-bold text-white">Featured Projects</h2>
+                <p class="text-slate-400">Selected full-stack web applications and machine learning NLP systems.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project Card 1: Rantit -->
+                <div class="glass-card rounded-2xl border border-slate-800 overflow-hidden flex flex-col justify-between group hover:border-primary-500/50 transition-all">
+                    <div class="p-6 space-y-4">
+                        <div class="flex items-center justify-between">
+                            <span class="px-3 py-1 rounded-full bg-primary-500/10 text-primary-500 text-xs font-semibold border border-primary-500/30">
+                                Fullstack Microservice App
+                            </span>
+                            <div class="flex gap-3 text-slate-400">
+                                <a href="https://rant-it-seven.vercel.app/" target="_blank" rel="noopener noreferrer" class="hover:text-primary-500 transition-colors" title="Live Demo">
+                                    <i class="fa-solid fa-up-right-from-square text-lg"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold text-white group-hover:text-primary-500 transition-colors">
+                            Rantit Application
+                        </h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">
+                            Designed, developed, and deployed a containerized microservice-ready web platform hosting backend services with modern Spring Boot 3.5, React frontend, and Docker deployment.
+                        </p>
+                        <div class="flex flex-wrap gap-2 pt-2">
+                            <span class="text-xs bg-slate-800 px-2.5 py-1 rounded text-slate-300">Java 17</span>
+                            <span class="text-xs bg-slate-800 px-2.5 py-1 rounded text-slate-300">Spring Boot 3.5</span>
+                            <span class="text-xs bg-slate-800 px-2.5 py-1 rounded text-slate-300">React</span>
+                            <span class="text-xs bg-slate-800 px-2.5 py-1 rounded text-slate-300">Docker</span>
+                        </div>
+                    </div>
+                    <div class="p-6 border-t border-slate-800/80 bg-slate-900/30">
+                        <a href="https://rant-it-seven.vercel.app/" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-primary-500 hover:text-primary-400 flex items-center gap-2">
+                            Visit Live Deployment <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project Card 2: Weighted Ensemble NLP -->
+                <div class="glass-card rounded-2xl border border-slate-800 overflow-hidden flex flex-col justify-between group hover:border-accent-500/50 transition-all">
+                    <div class="p-6 space-y-4">
+                        <div class="flex items-center justify-between">
+                            <span class="px-3 py-1 rounded-full bg-accent-500/10 text-accent-500 text-xs font-semibold border border-accent-500/30">
+                                University Minor Project
+                            </span>
+                            <span class="text-xs text-emerald-400 font-bold bg-emerald-950/60 px-2.5 py-1 rounded border border-emerald-500/30">
+                                90.53% Accuracy
+                            </span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white group-hover:text-accent-500 transition-colors">
+                            Ensemble Sentiment Classifier
+                        </h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">
+                            Designed a full NLP preprocessing pipeline and built an adaptive ensemble system combining SVM and Naïve Bayes classifiers to evaluate complex review datasets.
+                        </p>
+                        <div class="flex flex-wrap gap-2 pt-2">
+                            <span class="text-xs bg-slate-800 px-2.5 py-1 rounded text-slate-300">Python</span>
+                            <span class="text-xs bg-slate-800 px-2.5 py-1 rounded text-slate-300">SVM & Naïve Bayes</span>
+                            <span class="text-xs bg-slate-800 px-2.5 py-1 rounded text-slate-300">NLP</span>
+                            <span class="text-xs bg-slate-800 px-2.5 py-1 rounded text-slate-300">Scikit-Learn</span>
+                        </div>
+                    </div>
+                    <div class="p-6 border-t border-slate-800/80 bg-slate-900/30 text-xs text-slate-400">
+                        Adaptive machine learning system for feedback classification.
+                    </div>
+                </div>
+
+                <!-- Project Card 3: Text Summarization -->
+                <div class="glass-card rounded-2xl border border-slate-800 overflow-hidden flex flex-col justify-between group hover:border-primary-500/50 transition-all">
+                    <div class="p-6 space-y-4">
+                        <div class="flex items-center justify-between">
+                            <span class="px-3 py-1 rounded-full bg-primary-500/10 text-primary-500 text-xs font-semibold border border-primary-500/30">
+                                University Major Project
+                            </span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white group-hover:text-primary-500 transition-colors">
+                            Text Summarization (LSA & Transformers)
+                        </h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">
+                            Implemented complex data structures, NLP algorithms, and feature extraction techniques (LSA and Transformer architectures) with quantitative metric evaluation.
+                        </p>
+                        <div class="flex flex-wrap gap-2 pt-2">
+                            <span class="text-xs bg-slate-800 px-2.5 py-1 rounded text-slate-300">Transformers</span>
+                            <span class="text-xs bg-slate-800 px-2.5 py-1 rounded text-slate-300">LSA</span>
+                            <span class="text-xs bg-slate-800 px-2.5 py-1 rounded text-slate-300">NLP</span>
+                            <span class="text-xs bg-slate-800 px-2.5 py-1 rounded text-slate-300">Deep Learning</span>
+                        </div>
+                    </div>
+                    <div class="p-6 border-t border-slate-800/80 bg-slate-900/30 text-xs text-slate-400">
+                        Pulchowk Campus Engineering Capstone Project.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education & Achievements Section -->
+        <section id="education" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-slate-800/80">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+                <!-- Education Card -->
+                <div class="space-y-6">
+                    <div class="inline-flex items-center gap-2 text-primary-500 font-semibold text-sm uppercase tracking-wider">
+                        <i class="fa-solid fa-graduation-cap"></i> Academic Background
+                    </div>
+                    <h2 class="text-3xl font-bold text-white">Education & Qualifications</h2>
+
+                    <div class="glass-card p-6 rounded-2xl border border-slate-800 space-y-4">
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs text-primary-500 font-bold bg-primary-500/10 px-3 py-1 rounded-full">
+                                2018 – 2023
+                            </span>
+                            <span class="text-xs text-slate-400">Kathmandu, Nepal</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">
+                            Bachelor's Degree in Electronics, Communication & Information Engineering
+                        </h3>
+                        <p class="text-sm font-semibold text-slate-300">
+                            Institute of Engineering (IOE), Pulchowk Campus, Tribhuvan University
+                        </p>
+                        <p class="text-xs text-slate-400 leading-relaxed">
+                            <strong class="text-slate-200">Relevant Coursework:</strong> Data Structures & Algorithms, Database Management Systems, Object-Oriented Software Engineering, Enterprise Computing, Operating Systems, Computer Networks.
+                        </p>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-2xl border border-slate-800 space-y-2">
+                        <div class="flex items-center justify-between text-xs text-slate-400">
+                            <span>2015 – 2017</span>
+                            <span>Butwal, Nepal</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-white">Intermediate Level - Science</h3>
+                        <p class="text-sm text-slate-400">Paramount Boarding High School</p>
+                    </div>
+                </div>
+
+                <!-- Honors & Distinctions Card -->
+                <div class="space-y-6">
+                    <div class="inline-flex items-center gap-2 text-accent-500 font-semibold text-sm uppercase tracking-wider">
+                        <i class="fa-solid fa-award"></i> Honors & Language
+                    </div>
+                    <h2 class="text-3xl font-bold text-white">Key Distinction</h2>
+
+                    <div class="glass-card p-6 rounded-2xl border border-accent-500/30 bg-slate-900/80 space-y-4">
+                        <div class="w-12 h-12 rounded-xl bg-accent-500/10 text-accent-500 flex items-center justify-center text-xl">
+                            <i class="fa-solid fa-trophy"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">Merit-Based IOE Scholarship</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed">
+                            Awarded full merit scholarship after ranking in the <strong class="text-accent-500 font-bold">Top 2.5%</strong> among approximately <strong class="text-white">16,000 applicants</strong> in the prestigious IOE Pulchowk Campus entrance examination.
+                        </p>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-2xl border border-slate-800 space-y-3">
+                        <h3 class="text-lg font-bold text-white flex items-center gap-2">
+                            <i class="fa-solid fa-globe text-primary-500"></i> Language Proficiency
+                        </h3>
+                        <div class="flex items-center justify-between text-sm">
+                            <span class="text-slate-300 font-medium">English</span>
+                            <span class="text-primary-500 font-bold">Fluent (Academic IELTS Score: 7.0)</span>
+                        </div>
+                        <div class="flex items-center justify-between text-sm">
+                            <span class="text-slate-300 font-medium">Nepali</span>
+                            <span class="text-slate-400">Native / Mother Tongue</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
+            <div class="glass-card rounded-3xl p-8 sm:p-12 border border-slate-800 text-center space-y-8 relative overflow-hidden">
+                <div class="absolute -top-24 -right-24 w-64 h-64 bg-primary-500/10 rounded-full blur-3xl"></div>
+                <div class="absolute -bottom-24 -left-24 w-64 h-64 bg-accent-500/10 rounded-full blur-3xl"></div>
+
+                <div class="max-w-2xl mx-auto space-y-4">
+                    <div class="inline-flex items-center gap-2 text-primary-500 font-semibold text-sm uppercase tracking-wider">
+                        <i class="fa-solid fa-paper-plane"></i> Let's Collaborate
+                    </div>
+                    <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
+                        Ready to Build or Scale Your Application?
+                    </h2>
+                    <p class="text-slate-400">
+                        Whether you are looking for a reliable software engineer, L3 incident resolution specialist, or backend architect—feel free to reach out directly.
+                    </p>
+                </div>
+
+                <!-- Contact Badges -->
+                <div class="flex flex-wrap justify-center gap-4 text-sm">
+                    <a href="mailto:abhay.nepal.9@gmail.com" class="px-6 py-3.5 rounded-xl bg-primary-600 hover:bg-primary-500 text-slate-950 font-bold flex items-center gap-3 transition-all shadow-lg shadow-primary-600/30">
+                        <i class="fa-solid fa-envelope text-lg"></i> abhay.nepal.9@gmail.com
+                    </a>
+                    <a href="https://wa.me/9779846927983" target="_blank" rel="noopener noreferrer" class="px-6 py-3.5 rounded-xl glass-card hover:bg-slate-800 text-white font-semibold flex items-center gap-3 transition-all border border-slate-700">
+                        <i class="fa-brands fa-whatsapp text-lg text-emerald-400"></i> (+977) 9846927983
+                    </a>
+                </div>
+
+                <!-- Social Links -->
+                <div class="flex justify-center gap-6 pt-4 text-slate-400">
+                    <a href="https://github.com/abhaynepal" target="_blank" rel="noopener noreferrer" class="hover:text-primary-500 text-2xl transition-colors">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/abhay-nepal" target="_blank" rel="noopener noreferrer" class="hover:text-accent-500 text-2xl transition-colors">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-800 py-8 px-4 text-center text-xs text-slate-500">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div>
+                © <span id="year"></span> Abhay Nepal. All rights reserved.
+            </div>
+            <div>
+                Hosted on <span class="text-slate-300 font-semibold">GitHub Pages</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Script -->
+    <script>
+        // Set dynamic current year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on link click
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
